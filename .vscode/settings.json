@@ -1,0 +1,11 @@
+{
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": "explicit"
+    },
+    "prettier.requireConfig": true,
+    "tailwindCSS.lint.cssConflict": "ignore",
+    "tailwindCSS.lint.suggestCanonicalClasses": "ignore",
+    "css.lint.unknownAtRules": "ignore"
+}
