@@ -1,11 +1,37 @@
 'use client';
 
-import { Asterisk, Clock, FileText, Image, List, MapPin, Plus, Tag } from 'lucide-react';
+import { Asterisk, Clock, FileText, Image, List, MapPin, Tag } from 'lucide-react';
+import { useForm } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
 
+import createValidationSchema from '@/schema/CreateValidationSchema/CreateValidationSchema';
 import TypeSelect from '@/components/ui/TypeSelect/TypeSelect';
 import Link from 'next/link';
 
 export default function CreateForm() {
+    const {
+        handleSubmit,
+        register,
+        control,
+        formState: { errors },
+    } = useForm({
+        resolver: zodResolver(createValidationSchema),
+        defaultValues: {
+            facility_name: '',
+            facility_type: '',
+            description: '',
+            location: '',
+            capacity: '',
+            image: '',
+            price: '',
+            available_slots: '',
+        },
+    });
+
+    const handleFormSubmit = (form) => {
+        console.log(form);
+    };
+
     return (
         <form onSubmit={handleSubmit(handleFormSubmit)} className="mt-6">
             <div className="flex w-full flex-col justify-center gap-6 sm:mt-8 2xl:flex-row">
