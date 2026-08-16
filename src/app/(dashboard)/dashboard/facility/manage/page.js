@@ -1,9 +1,7 @@
 'use client';
 
+import FacilityManageModule from '@/modules/FacilityManageModule/FacilityManageModule';
+
 export default function FacilityManagePage() {
-    return (
-        <div className="min-h-screen w-full">
-            <h1>Facility manage page</h1>
-        </div>
-    );
+    return <FacilityManageModule />;
 }
