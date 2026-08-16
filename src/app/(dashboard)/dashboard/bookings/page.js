@@ -1,9 +1,7 @@
 'use client';
 
+import FacilityBookingModule from '@/modules/FacilityBookingModule/FacilityBookingModule';
+
 export default function BookingsPage() {
-    return (
-        <div className="min-h-screen w-full">
-            <h1>Bookings page</h1>
-        </div>
-    );
+    return <FacilityBookingModule />;
 }
