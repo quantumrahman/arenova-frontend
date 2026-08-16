@@ -1,9 +1,7 @@
 'use client';
 
+import FacilityUpdateModule from '@/modules/FacilityUpdateModule/FacilityUpdateModule';
+
 export default function FacilityUpdatePage() {
-    return (
-        <div className="min-h-screen w-full">
-            <h1>Facility update page</h1>
-        </div>
-    );
+    return <FacilityUpdateModule />;
 }
